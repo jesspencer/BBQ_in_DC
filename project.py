@@ -11,8 +11,8 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind = engine)
 session = DBSession
 
-@app route('/')
-@app route('/hello')
+@app.route('/')
+@app.route('/hello')
 
 def HelloWorld:
     restaurant = session.query(Restaurant).first()
