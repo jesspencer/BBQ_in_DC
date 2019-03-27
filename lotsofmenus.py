@@ -48,4 +48,4 @@ session.commit()
 
 print "added items!"
 
-print session.query(Restaurant).all
+print session.query(Restaurant).all()
