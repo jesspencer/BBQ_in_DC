@@ -13,6 +13,14 @@ DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
 @app.route('/')
+def dostuff():
+    with sql.connect("restaurantmenu.db") as con:
+    name = "bob"
+    cur = con.cursor()
+    cur.execute("INSERT INTO students (name) VALUES (?)",(bob))
+    con.commit()
+    msg = "Done"
+
 @app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
