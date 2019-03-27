@@ -48,4 +48,6 @@ session.commit()
 
 print "added items!"
 
-print session.query(Restaurant).all()
+items= session.query(MenuItem).all()
+for  item in items:
+    print item.name 
