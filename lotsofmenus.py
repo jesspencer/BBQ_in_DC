@@ -14,8 +14,7 @@ session.add(restaurant1)
 ##staging field
 session.commit()
 
-menuItem1 = MenuItem(name = "Two-Door '87 Cutlass Supreme Nachos", description = "corn tortillas, queso, salsa verde, salsa roja, sour cream, cilantro and radishes
-", course = "Appetizer", price = "$6.00", restaurant = restaurant1)
+menuItem1 = MenuItem(name = "Two-Door '87 Cutlass Supreme Nachos", description = "corn tortillas, queso, salsa verde, salsa roja, sour cream, cilantro and radishes", course = "Appetizer", price = "$6.00", restaurant = restaurant1)
 
 session.add(menuItem1)
 session.commit()
