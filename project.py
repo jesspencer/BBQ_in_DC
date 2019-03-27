@@ -15,11 +15,11 @@ session = DBSession()
 @app.route('/')
 def dostuff():
     with sql.connect("restaurantmenu.db") as con:
-    name = "bob"
-    cur = con.cursor()
-    cur.execute("INSERT INTO students (name) VALUES (?)",(bob))
-    con.commit()
-    msg = "Done"
+        name = "bob"
+        cur = con.cursor()
+        cur.execute("INSERT INTO students (name) VALUES (?)",(bob))
+        con.commit()
+        msg = "Done"
 
 @app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
