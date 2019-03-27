@@ -6,10 +6,11 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
 
 engine = create_engine('sqlite:///restaurantmenu.db')
+
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind = engine)
-session = DBSession
+session = DBSession()
 
 @app.route('/')
 @app.route('/hello')
@@ -17,13 +18,13 @@ session = DBSession
 def HelloWorld():
     restaurant = session.query(Restaurant).first()
     items = session.query(MenuItem).filter_by(restaurant_id=restaurant.id)
-    output = ""
-    for item in items:
-        output += item.name
+    output = ' '
+    for i in items:
+        output += i.name
         output += '</br>'
-        output += item.price
+        output += i.price
         output += '</br>'
-        output += item.description
+        output += i.description
         output += '</br>'
     return output
 
