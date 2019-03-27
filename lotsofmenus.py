@@ -28,7 +28,7 @@ menuItem3 = MenuItem(name="Wings", description ="crispy smoked wings, choice of 
 session.add(menuItem3)
 session.commit()
 
-menuItem4 = MenuItem4(name="Tortilla Chips", description = "cripsy chips", course = "Appetizer", price = "$6.00", restaurant = restaurant1)
+menuItem4 = MenuItem(name="Tortilla Chips", description = "cripsy chips", course = "Appetizer", price = "$6.00", restaurant = restaurant1)
 session.add(menuItem4)
 session.commit()
 
