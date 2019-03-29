@@ -21,12 +21,6 @@ def dostuff():
         con.commit()
         msg = "Done"
 
-@app.route('/restaurants')
-def restaurants():
-    restaurant = session.query(Restaurant).all()
-    items = session.query(MenuItem).filter_by(restaurant_id=restaurant.id)
-    return render_template('menu.html', restaurant = restaurant, items=items)
-
 @app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
@@ -34,7 +28,7 @@ def restaurantMenu(restaurant_id):
     return render_template('menu.html', restaurant = restaurant, items=items)
 
 @app.route('/restaurants/<int:restaurant_id>/new', methods = ['GET', 'POST'])
-def newMenItem(restaurant_id):
+def newMenuItem(restaurant_id):
     if request.method == 'POST':
         newItem = MenuItem(name=request.form['name'], restaurant_id=restaurant_id)
         session.add(newItem)
