@@ -37,7 +37,14 @@ def newMenItem(restaurant_id):
     else:
         return render_template('newMenItem.html', restaurant_id = restaurant_id)
 
-        
+@app.route('/restaurant/<int:restaurant_id>/<int:menu_id>edit/')
+def editMenuItem(restaurant_id, menu_id):
+    return "page to edit a new menu item."
+
+@app.route('/restaurant/<int:restaurant_id>/<int:menu_id>/delete/')
+def delete MenuItem(restaurant_id, menu_id):
+    return "page to delete a new menu item."
+
 if __name__ =='__main__':
     app.debug = True
     app.run(host='0.0.0.0', port = 5000)
