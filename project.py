@@ -43,7 +43,7 @@ def editMenuItem(restaurant_id, menu_id):
 
 @app.route('/restaurant/<int:restaurant_id>/<int:menu_id>/delete/', methods = ['GET', 'POST'])
 def deleteMenuItem(restaurant_id, menu_id):
-    deletedItem = session.query(MenuItem).filter_by(id=menu_id.one())
+    deletedItem = session.query(MenuItem).filter_by(id=menu_id).one()
     if request.method =='POST':
         session.delete(deletedItem)
         session.commit()
