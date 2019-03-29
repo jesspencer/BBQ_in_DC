@@ -1,9 +1,10 @@
-# bbq_in_DC
-## "bbq_in_dc" is an application that can be updated by users; it will contain the menus for bbq restaurants in dc.  
-The app will include:
-1. name of restaurant
-2. rating (ratings will come from yelp)
-3. menu_items for the restaurant, which will include name, description, price, course (entree, appetizer, dessert)  
+# Good-Grub
+
+## Menu application, where menu items listed can be updated by users.
+
+## The app will include:
+1. Name of restaurant
+2. Menu items for the restaurant, which will include name, description, price, course (entree, appetizer, dessert).  
 
 ## Requirements
 1. sqlalchemy
@@ -11,5 +12,9 @@ The app will include:
 3. flask
 
 ## How to Run
-1. run database_setup.py
-2. add restaurants to database
+1. Run database_setup.py 
+--this creates restaurantmenu.db
+2. Run lotsofmenus.py
+--this provides the menus that will be in the database
+3. Run project.py
+--this is the flask application that will allow the menus to show in your web browser
