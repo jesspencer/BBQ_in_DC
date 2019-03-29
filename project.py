@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
@@ -6,7 +7,6 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
 
 engine = create_engine('sqlite:///restaurantmenu.db')
-
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind = engine)
@@ -14,7 +14,7 @@ session = DBSession()
 
 @app.route('/')
 def dostuff():
-    with sql.connect("restaurantmenu.db") as con:
+    with sql.connect("restaurantmenu.db", check_same_thread = False) as con:
         name = "bob"
         cur = con.cursor()
         cur.execute("INSERT INTO students (name) VALUES (?)",(bob))
