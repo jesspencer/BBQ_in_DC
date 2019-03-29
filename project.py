@@ -42,7 +42,7 @@ def editMenuItem(restaurant_id, menu_id):
     return "page to edit a new menu item."
 
 @app.route('/restaurant/<int:restaurant_id>/<int:menu_id>/delete/')
-def delete MenuItem(restaurant_id, menu_id):
+def deleteMenuItem(restaurant_id, menu_id):
     return "page to delete a new menu item."
 
 if __name__ =='__main__':
