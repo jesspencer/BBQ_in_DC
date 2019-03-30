@@ -13,7 +13,7 @@ DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
 @app.route('/')
-@app.route('/restaurants/<int:restaurant_id>/menu')
+@app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
     items = session.query(MenuItem).filter_by(restaurant_id=restaurant.id)
@@ -38,7 +38,7 @@ def editMenuItem(restaurant_id, menu_id):
             editedItem.name = request.form['name']
         session.add(editedItem)
         session.commit()
-        flash('Menu item has been edited!')
+        flash("Menu item has been edited!")
         return redirect(url_for('restaurantMenu', restaurant_id = restaurant_id))
     else:
         return render_template('editMenuItem.html', restaurant_id=restaurant_id, menu_id=menu_id, item= editedItem)
@@ -58,4 +58,5 @@ def deleteMenuItem(restaurant_id, menu_id):
 
 if __name__ =='__main__':
     app.debug = True
+    app.secret_key = "super_secret_key"
     app.run(host='0.0.0.0', port = 5000, threaded = False)
