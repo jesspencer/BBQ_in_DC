@@ -13,14 +13,6 @@ DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
 @app.route('/')
-def dostuff():
-    with sql.connect("restaurantmenu.db", check_same_thread = False) as con:
-        name = "bob"
-        cur = con.cursor()
-        cur.execute("INSERT INTO students (name) VALUES (?)",(bob))
-        con.commit()
-        msg = "Done"
-
 @app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
@@ -35,7 +27,7 @@ def newMenuItem(restaurant_id):
         session.commit()
         return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
     else:
-        return render_template('newMenItem.html', restaurant_id = restaurant_id)
+        return render_template('newMenuItem.html', restaurant_id = restaurant_id)
 
 @app.route('/restaurant/<int:restaurant_id>/<int:menu_id>/edit/', methods = ['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
