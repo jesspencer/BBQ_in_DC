@@ -13,6 +13,7 @@
 2. python 2.7
 3. flask
 4. virtualenv
+5. os
 
 ## How to Run / Setup
 1. Install virtualenv: virtualenv #nameofyourvirtualenv
@@ -24,12 +25,17 @@
 3. Activate: source #nameofyourvirtualenv/bin/activate
  -- this activates the environment -- type 'deactivate' to end
 
-4. Clone the project: git clone https://github.com/jesspencer/good-grub.git
+4. Install Flask
+-- pip install Flask
+5. Install Flask-sqlalchemy
+-- pip install Flask-SQLALchemy
 
-4. cd good-Grub
-5. Run database_setup.py
+6. Clone the project: git clone https://github.com/jesspencer/good-grub.git
+
+7. cd good-Grub
+8. Run database_setup.py
 --this creates restaurantmenu.db
-6. Run lotsofmenus.py
+9. Run lotsofmenus.py
 --this provides the menus that will be in the database
-7. Run project.py
+10. Run project.py
 --this is the flask application that will allow the menus to show in your web browser
