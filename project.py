@@ -23,13 +23,10 @@ def menuItemJSON(restaurant_id, menu_id):
     return jsonify(MenuItem = menuItem.serialize)
 
 @app.route('/restaurants/')
-def restaurantList():
-    restaurant = session.query(Restaurant).filter_by(name= MenuItem.name).all()
-    output = ""
-    for i in restaurant:
-        output += i.name
-        output += '<br'
-    return output
+def restaurantIndex():
+    restaurant = session.query(Restaurant).all()
+    return render_template('menuIndex.html', restaurant= restaurant, items= items, restaurant_id= restaurant_id)
+
 
 @app.route('/')
 @app.route('/restaurants/<int:restaurant_id>/')
