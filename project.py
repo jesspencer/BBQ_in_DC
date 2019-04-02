@@ -25,9 +25,9 @@ def menuItemJSON(restaurant_id, menu_id):
 @app.route('/')
 @app.route('/restaurants/')
 def showRestaurant():
-    restaurants = sessioin.query(Restaurant).order_by(asc(Restaurant.name))
+    restaurants = session.query(Restaurant).order_by(asc(Restaurant.name))
     return render_template('menuIndex.html', restaurants = restaurants)
-    
+
 @app.route('/restaurants/<int:restaurant_id>/')
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
