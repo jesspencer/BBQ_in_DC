@@ -31,7 +31,7 @@ def restaurantsJSON():
 @app.route('/restaurant/')
 def showRestaurant():
     restaurants = session.query(Restaurant).order_by(asc(Restaurant.name))
-    return render_template('menuIndex.html', restaurants = restaurants)
+    return render_template('restaurants.html', restaurants = restaurants)
 
 # Create a new restaurant
 
@@ -43,7 +43,7 @@ def newRestaurant():
         session.add(newRestaurant)
         flash('New Restaurant %s Successfully Created' % newRestaurant.name)
         session.commit()
-        return redirect(url_for('showRestaurants'))
+        return redirect(url_for('showRestaurant'))
     else:
         return render_template('newRestaurant.html')
 
@@ -58,7 +58,7 @@ def editRestaurant(restaurant_id):
         if request.form['name']:
             editedRestaurant.name = request.form['name']
             flash('Restaurant Successfully Edited %s' % editedRestaurant.name)
-            return redirect(url_for('showRestaurants'))
+            return redirect(url_for('showRestaurant'))
     else:
         return render_template('editRestaurant.html', restaurant=editedRestaurant)
 
@@ -72,7 +72,7 @@ def deleteRestaurant(restaurant_id):
         session.delete(restaurantToDelete)
         flash('%s Successfully Deleted' % restaurantToDelete.name)
         session.commit()
-        return redirect(url_for('showRestaurants', restaurant_id=restaurant_id))
+        return redirect(url_for('showRestaurant', restaurant_id=restaurant_id))
     else:
         return render_template('deleteRestaurant.html', restaurant=restaurantToDelete)
 
