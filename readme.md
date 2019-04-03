@@ -23,7 +23,7 @@ Menu application, where menu items listed can be updated by users. Database back
 - Deactivate: type 'deactivate' to end
 
 * Once the virtual environment is activated:
-* Drink a sip of cold beer and settle in; my beer recommendation, (https://dcbrau.com/beer/)
+* Drink a sip of cold beer and settle in; my beer recommendation is DC Brau (https://dcbrau.com/beer/)
 
 - Now Install Flask, type 'pip install Flask' (http://flask.pocoo.org/docs/1.0/installation/#)
 - Now that flask is installed, install Flask-sqlalchemy, type 'pip install Flask-SQLALchemy' (https://pypi.org/project/Flask-SQLAlchemy/)
