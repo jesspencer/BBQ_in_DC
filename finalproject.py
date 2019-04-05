@@ -17,9 +17,9 @@ session = DBSession()
 
 #Creating An Anti-Forgery State Token
 @app.route('/login')
-state= ''.join(random.choice(string.ascii-uppercase+string.digits) for x in xrange(32))
-login_session['state'] = state
-return "The current session state is %s" % login.session['state']
+    state= ''.join(random.choice(string.ascii-uppercase+string.digits) for x in xrange(32))
+    login_session['state'] = state
+    return "The current session state is %s" % login.session['state']
 
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
