@@ -17,6 +17,7 @@ session = DBSession()
 
 #Creating An Anti-Forgery State Token
 @app.route('/login')
+def showLogin():
     state= ''.join(random.choice(string.ascii-uppercase+string.digits) for x in xrange(32))
     login_session['state'] = state
     return "The current session state is %s" % login.session['state']
