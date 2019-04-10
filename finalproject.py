@@ -20,7 +20,7 @@ session = DBSession()
 def showLogin():
     state = ''.join(random.choice(string.ascii_uppercase+string.digits)for x in xrange(32))
     login_session['state'] = state
-    return "The current session is %s" % login.session['state'])
+    return "The current session is %s" % login.session['state']
 
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
