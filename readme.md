@@ -16,18 +16,20 @@ Menu application, where menu items listed can be updated by users. Database back
 6. pip
 
 ## RUNNING DOCUMENTATION LOCALLY
+
+##This project uses a virtual environment / The Setup
 - Install Virtual Environment, (https://virtualenv.pypa.io/en/latest/installation/)
 - Create the environment: virtualenv #nameofyourvirtualenv
 - Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
 - Activate: source #nameofyourvirtualenv/bin/activate
 - Deactivate: type 'deactivate' to end
 
-* Once the virtual environment is activated:
-* Drink a sip of cold beer and settle in; my beer recommendation is DC Brau (https://dcbrau.com/beer/)
+## Flask Install
 
 - Now Install Flask, type 'pip install Flask' (http://flask.pocoo.org/docs/1.0/installation/#)
 - Now that flask is installed, install Flask-sqlalchemy, type 'pip install Flask-SQLALchemy' (https://pypi.org/project/Flask-SQLAlchemy/)
 
+## Once virtual environment set, Flask and Flask-sqlalchemy loaded
 * Clone the project: git clone https://github.com/jesspencer/good-grub.git
 * cd good-Grub
 * Create restaurantmenu.db, with 'python database_setup.py'
@@ -35,7 +37,7 @@ Menu application, where menu items listed can be updated by users. Database back
 * Start the flask application that will allow the menu to show in your browswer, with 'python project.py'
 * Lastly, open the WebApp by typing the following into your browser, http://localhost:5000/restaurant/
 
-The program will list if any all the restaurants in your database and the following options:
+## The program will list if any all the restaurants in your database and the following options:
  * create a new restaurant
  * see the menu
  * edit/delete the restaurant
@@ -46,7 +48,7 @@ The program will list if any all the restaurants in your database and the follow
 Have a bug or a feature request? Please open an [issue](https://github.com/jesspencer/good-grub/issues/new).
 
 ## DOCUMENTATION
-This Restaurant-Menu-WebApp documentation included in this repo in the root directory is built with Python version 2.7.9, Flask web framework, and SQLAlchemy.  The docs may also be run locally in your Linux database server, or Linux virtual databaser server.
+This Restaurant-Menu-WebApp documentation included in this repo in the root directory is built with Python virtual database server, Flask web framework, and SQLAlchemy.  The docs may also be run locally in your Linux database server, or Linux version 2.7.9.
 
 ## CREATOR
 **Jessica Spencer**

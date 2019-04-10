@@ -18,9 +18,9 @@ session = DBSession()
 #Creating An Anti-Forgery State Token
 @app.route('/login')
 def showLogin():
-    state= ''.join(random.choice(string.ascii_uppercase+string.digits)for x in xrange(32))
+    state = ''.join(random.choice(string.ascii_uppercase+string.digits)for x in xrange(32))
     login_session['state'] = state
-    return render_template('login.html', STATE = state)
+    return "The current session is %s" % login.session['state'])
 
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
