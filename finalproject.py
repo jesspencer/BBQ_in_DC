@@ -34,6 +34,30 @@ def showLogin():
     login_session['state'] = state
     return render_template('login.html', STATE = state)
 
+#GConnection
+@app.route('/gconnect', methods = ['POST'])
+def gconnect():
+
+    #Validate state token
+    if request.args.get('state') != login_session['state']:
+        response = make_response(json.dumps('Invalid state parameter.'), 401)
+        response.headers ['content-type'] = 'application/json'
+        return response
+
+    #Obtain  authorization code also compatible with python3
+    request.get_data()
+    code = request.data.decode('utf-8')
+    try:
+        #upgrade the authorization code into a credential object
+        oauth_flow = flow_from_clientsecrets('client_secrets.json'; scope = ")
+        oauth_flow.redirect_uri = 'post message'
+        credentials = oauth_flow.step2_exchange(code)
+    except FlowExchangeError:
+        response = make_response(
+            json.dumps('Failed to upgrade teh authorization code.'), 401)
+        response.headers['Content-Type'] = 'application/json'
+        return response
+
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
     restaurant=session.query(Restaurant).filter_by(id=restaurant_id).one()
