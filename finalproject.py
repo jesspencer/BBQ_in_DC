@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, make_response
-app = Flask(__name__)
-
 from sqlalchemy import create_engine, asc, desc
 from sqlalchemy.orm import sessionmaker
 from database_setup import *
@@ -8,10 +6,20 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 from login_decorator import login_required
 
+# Flask
+app = Flask(__name__)
+
 #anti forgery imports
 from flask import session as login_session
 import os, random, string, datetime, json,httplib2, requests
 
+#GCONNECT
+CLIENT_ID = json.loads(
+    open ('client_secrets.json', 'r'). read())['web']['client_id']
+APPLICATION_NAME = "Restaurant App"
+
+
+#DATABASE
 engine = create_engine('sqlite:///restaurantmenu.db')
 Base.metadata.bind = engine
 
