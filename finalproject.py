@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import *
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
+from login_decorator import login_required
 
 #anti forgery imports
 from flask import session as login_session
