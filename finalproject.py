@@ -49,7 +49,7 @@ def gconnect():
     code = request.data.decode('utf-8')
     try:
         #upgrade the authorization code into a credential object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope = ")
+        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope = '')
         oauth_flow.redirect_uri = 'post message'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
