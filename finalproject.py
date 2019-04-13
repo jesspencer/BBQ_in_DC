@@ -49,7 +49,7 @@ def gconnect():
     code = request.data.decode('utf-8')
     try:
         #upgrade the authorization code into a credential object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json'; scope = ")
+        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope = ")
         oauth_flow.redirect_uri = 'post message'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
@@ -112,7 +112,6 @@ def gconnect():
     login_session =['username'] = data['name']
     login_session['picture'] = data['picture']
     login_session['email'] = data['email']
-    
 
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
