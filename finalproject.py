@@ -103,6 +103,17 @@ def gconnect():
     login_session['access_token'] = access_token
     login_session['gplus_id'] = gplus_id
 
+    #Getting user information
+    user_info_url= "https://www.googleapis.com/oauth2/v/user_info"
+    params = {'acccess_token': access_token, 'alt':'json'}
+    answer = requests.get(userinfo_url, params = params)
+
+    data = answer.json()
+    login_session =['username'] = data['name']
+    login_session['picture'] = data['picture']
+    login_session['email'] = data['email']
+    
+
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
     restaurant=session.query(Restaurant).filter_by(id=restaurant_id).one()
