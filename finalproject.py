@@ -109,7 +109,7 @@ def gconnect():
     answer = requests.get(userinfo_url, params = params)
 
     data = answer.json()
-    login_session =['username'] = data['name']
+    login_session ['username'] = data['name']
     login_session['picture'] = data['picture']
     login_session['email'] = data['email']
 
@@ -179,7 +179,7 @@ def gdisconnect():
             json.dumps('Failed to revoke token for given user.', 400))
         response.headers['Content-Type'] = 'application/json'
         return response
-        
+
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
     restaurant=session.query(Restaurant).filter_by(id=restaurant_id).one()
