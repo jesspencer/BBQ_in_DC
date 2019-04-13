@@ -170,7 +170,7 @@ def gdisconnect():
         del login_session['email']
         del login_session['picture']
 
-        response = redirect(url_for('showCatalog'))
+        response = redirect(url_for('showRestaurant'))
         flash("You are now logged out.")
         return response
     else:
@@ -179,7 +179,7 @@ def gdisconnect():
             json.dumps('Failed to revoke token for given user.', 400))
         response.headers['Content-Type'] = 'application/json'
         return response
-
+        
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
     restaurant=session.query(Restaurant).filter_by(id=restaurant_id).one()
