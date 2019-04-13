@@ -88,7 +88,7 @@ def gconnect():
         response = make_response(
             json.dumps("Token's client ID does not match app's ."), 401)
         response.headers['Content-Type'] = 'application/json'
-        return.response
+        return response
 
     stored_access_token = login_session.get('access_token')
     stored_gplus_id = login_session.get('gplus_id')
