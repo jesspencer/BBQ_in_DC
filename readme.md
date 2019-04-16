@@ -8,18 +8,18 @@ Menu application, where menu items listed can be updated by users. Database back
 * 3. Table 2: Menuitem: which includes name, description, price, course (entree, appetizer, dessert), id (primary_key), restaurant_id (ForeignKey), restaurant  
 
 ## REQUIREMENTS
-1. flask-sqlalchemy
-2. python 2.7
-3. flask
-4. virtualenv
-5. os
-6. pip
+- flask-sqlalchemy
+- python 2.7
+- flask
+- virtualenv
+- os
+- pip
 
 ## RUNNING DOCUMENTATION LOCALLY
 
 ##This project uses a virtual environment / The Setup
-- Install Virtual Environment, (https://virtualenv.pypa.io/en/latest/installation/)
-- Create the environment: virtualenv #nameofyourvirtualenv
+1. Install Virtual Environment: > pip install virtualenv https://virtualenv.pypa.io/en/latest/installation/
+2. Create the environment: virtualenv #nameofyourvirtualenv
 - Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
 - Activate: source #nameofyourvirtualenv/bin/activate
 - Deactivate: type 'deactivate' to end
