@@ -18,11 +18,13 @@ Menu application, where menu items listed can be updated by users. Database back
 ## RUNNING DOCUMENTATION LOCALLY
 
 ##This project uses a virtual environment / The Setup
-1. Install Virtual Environment: > pip install virtualenv https://virtualenv.pypa.io/en/latest/installation/
+1. Install Virtual Environment: https://virtualenv.pypa.io/en/latest/installation/
 2. Create the environment: virtualenv #nameofyourvirtualenv
-- Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
-- Activate: source #nameofyourvirtualenv/bin/activate
-- Deactivate: type 'deactivate' to end
+3. Activate: source #nameofyourvirtualenv/bin/activate  (To Deactivate: type 'deactivate' to quit )
+4. Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
+5. Install oauth2client: pip3 install --upgrade oath2client
+6. Install pip3 install requests
+
 
 ## Flask Install
 
