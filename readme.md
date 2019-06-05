@@ -1,9 +1,10 @@
 # Good-Grub
+Interactive Restaurant WebApp, where the user has a landing page of menus.
+The user is then able to update, delete, or add more menus to the Restaurant WebApp.  
+Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 
-Menu application, where menu items listed can be updated by users. Database backed by SQLALchemy, (https://www.sqlalchemy.org/).
-
-## DATABASE SETUP:
-* 1. The Database has two tables or bases:
+## Database Design:
+* 1. The Database has two tables:
 * 2. Table 1: Restaurant: which includes name of restaurant and id column (primary_key)
 * 3. Table 2: Menuitem: which includes name, description, price, course (entree, appetizer, dessert), id (primary_key), restaurant_id (ForeignKey), restaurant  
 
@@ -17,9 +18,9 @@ Menu application, where menu items listed can be updated by users. Database back
 
 ## RUNNING DOCUMENTATION LOCALLY
 
-##This project uses a virtual environment / The Setup
+## How To Setup A Python Virtual Environment To Run WebApp
 1. Install Virtual Environment: https://virtualenv.pypa.io/en/latest/installation/
-2. Create the environment: virtualenv #nameofyourvirtualenv
+2. Create the environment: virtualenv #name
 3. Activate: source #nameofyourvirtualenv/bin/activate  (To Deactivate: type 'deactivate' to quit )
 4. Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
 5. Install oauth2client: pip3 install --upgrade oath2client
@@ -44,7 +45,7 @@ Menu application, where menu items listed can be updated by users. Database back
  * see the menu
  * edit/delete the restaurant
  * edit/delete the menu item
-* Interacting with these options will update the database.
+ * Interacting with these options will update the database.
 
 ## BUGS AND FEATURE REQUESTS
 Have a bug or a feature request? Please open an [issue](https://github.com/jesspencer/good-grub/issues/new).
