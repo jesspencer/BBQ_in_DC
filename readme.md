@@ -16,28 +16,27 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 - os
 - pip
 
-## RUNNING DOCUMENTATION LOCALLY
-
-## How To Setup A Python Virtual Environment To Run WebApp
-1. Install Virtual Environment: https://virtualenv.pypa.io/en/latest/installation/
-2. Create the environment: virtualenv #name
-3. Activate: source #nameofyourvirtualenv/bin/activate  (To Deactivate: type 'deactivate' to quit )
-4. Install Python Version2.7: virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv
-5. Install oauth2client: pip3 install --upgrade oath2client
-6. Install pip3 install requests
+## RUNNING DOCUMENTATION LOCALLY:
+1. Documentation for installing VM: https://virtualenv.pypa.io/en/latest/installation/
+2. Create the environment: `virtualenv #name`
+3. Activate: `source #nameofyourvirtualenv/bin/activate`  
+(To Deactivate: type `deactivate` to quit )
+4. Install Python Version2.7: `virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv `
+5. Install oauth2client: `pip install --upgrade oath2client`
+6. Install: `pip3 install requests`
 
 
 ## Flask Install
 
-- Now Install Flask, type 'pip install Flask' (http://flask.pocoo.org/docs/1.0/installation/#)
-- Now that flask is installed, install Flask-sqlalchemy, type 'pip install Flask-SQLALchemy' (https://pypi.org/project/Flask-SQLAlchemy/)
+- Now Install Flask, type `pip install Flask`(http://flask.pocoo.org/docs/1.0/installation/#)
+- Now that flask is installed, install Flask-sqlalchemy, type `pip install Flask-SQLALchemy` (https://pypi.org/project/Flask-SQLAlchemy/)
 
-## Once virtual environment set, Flask and Flask-sqlalchemy loaded
+## Once virtual environment, Flask, and Flask-sqlalchemy set
 * Clone the project: git clone https://github.com/jesspencer/good-grub.git
 * cd good-Grub
-* Create restaurantmenu.db, with 'python database_setup.py'
-* Put some menus into the empty restaurant database, with 'python lotsofmenus.py'
-* Start the flask application that will allow the menu to show in your browswer, with 'python project.py'
+* Create restaurantmenu.db, with `python database_setup.py`
+* Put some menus into the empty restaurant database, with `python lotsofmenus.py`
+* Start the flask application that will allow the menu to show in your browswer, with `python finalproject.py`
 * Lastly, open the WebApp by typing the following into your browser, http://localhost:5000/restaurant/
 
 ## The program will list if any all the restaurants in your database and the following options:
