@@ -1,4 +1,4 @@
-# Installing Flask
+# Flask_Flask-SQLALchemy
 
 1. Now Install Flask:
  type `pip install Flask`(http://flask.pocoo.org/docs/1.0/installation/#)
