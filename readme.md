@@ -17,29 +17,22 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 - pip
 
 ## RUNNING DOCUMENTATION LOCALLY:
-1. Documentation for installing VM: https://virtualenv.pypa.io/en/latest/installation/
-2. Create the environment: `virtualenv #name`
-3. Activate: `source #nameofyourvirtualenv/bin/activate`  
-(To Deactivate: type `deactivate` to quit )
-4. Install Python Version2.7: `virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv `
-5. Install oauth2client: `pip install --upgrade oath2client`
-6. Install: `pip3 install requests`
+1. Create a VM; here are the steps [Creating_A_VM.md] (https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
+2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy.md] (https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
+3. Run the virtual environment
+4. Clone the project https://github.com/jesspencer/good-grub.git
+5. cd good-Grub
+6. Start the flask application that will allow the menu to show in your browswer, with `python finalproject.py`
+7. Lastly, open the WebApp by typing the following into your browser, http://localhost:5000/restaurant/
 
+## Adding different menus
+If you would like to replace the menus in this project with ones of your own Do It!
+1. Delete the restaurantmenu.db file that you have cloned.
+2. Create restaurantmenu.db, with `python database_setup.py`
+4. Open the lotsofmenus.py file in your text editor and replace the restaurant names, menu item names, and save file.  
+5. Put some menus into the empty restaurant database, with `python lotsofmenus.py` 
 
-## Flask Install
-
-- Now Install Flask, type `pip install Flask`(http://flask.pocoo.org/docs/1.0/installation/#)
-- Now that flask is installed, install Flask-sqlalchemy, type `pip install Flask-SQLALchemy` (https://pypi.org/project/Flask-SQLAlchemy/)
-
-## Once virtual environment, Flask, and Flask-sqlalchemy set
-* Clone the project: git clone https://github.com/jesspencer/good-grub.git
-* cd good-Grub
-* Create restaurantmenu.db, with `python database_setup.py`
-* Put some menus into the empty restaurant database, with `python lotsofmenus.py`
-* Start the flask application that will allow the menu to show in your browswer, with `python finalproject.py`
-* Lastly, open the WebApp by typing the following into your browser, http://localhost:5000/restaurant/
-
-## The program will list if any all the restaurants in your database and the following options:
+## The application will list if any all the restaurants in your database and the following options:
  * create a new restaurant
  * see the menu
  * edit/delete the restaurant
