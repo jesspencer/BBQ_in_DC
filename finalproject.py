@@ -179,7 +179,7 @@ def gdisconnect():
             json.dumps('Failed to revoke token for given user.', 400))
         response.headers['Content-Type'] = 'application/json'
         return response
-        
+
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
 def restaurantMenuJSON(restaurant_id):
     restaurant=session.query(Restaurant).filter_by(id=restaurant_id).one()
@@ -261,7 +261,7 @@ def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
     items = session.query(MenuItem).filter_by(restaurant_id=restaurant_id)
     return render_template(
-        'menu.html', restaurant = restaurant, items=items, restaurant_id = restaurant_id)
+        'menu.html', restaurant = restaurant, items = items, restaurant_id = restaurant_id)
 
 @app.route('/restaurant/<int:restaurant_id>/new', methods = ['GET', 'POST'])
 def newMenuItem(restaurant_id):
@@ -284,7 +284,7 @@ def editMenuItem(restaurant_id, menu_id):
         if request.form['name']:
             editedItem.name = request.form['name']
         if request.form['description']:
-            editedItem.description = request.form['name']
+            editedItem.description = request.form['description']
         if request.form['price']:
             editedItem.price = request.form['price']
         if request.form['course']:
