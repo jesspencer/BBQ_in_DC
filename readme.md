@@ -17,8 +17,8 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 - pip
 
 ## RUNNING DOCUMENTATION LOCALLY:
-1. Create a VM; here are the steps [Creating_A_VM.md] (https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
-2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy.md] (https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
+1. Create a VM; here are the steps [Creating_A_VM] (https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
+2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy] (https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
 3. Run the virtual environment
 4. Clone the project https://github.com/jesspencer/good-grub.git
 5. cd good-Grub
@@ -30,7 +30,7 @@ If you would like to replace the menus in this project with ones of your own Do 
 1. Delete the restaurantmenu.db file that you have cloned.
 2. Create restaurantmenu.db, with `python database_setup.py`
 4. Open the lotsofmenus.py file in your text editor and replace the restaurant names, menu item names, and save file.  
-5. Put some menus into the empty restaurant database, with `python lotsofmenus.py` 
+5. Put some menus into the empty restaurant database, with `python lotsofmenus.py`
 
 ## The application will list if any all the restaurants in your database and the following options:
  * create a new restaurant
