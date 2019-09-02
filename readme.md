@@ -10,7 +10,7 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 
 ## REQUIREMENTS
 - flask-sqlalchemy
-- python 2.7
+- python 3.7
 - flask
 - virtualenv
 - os
