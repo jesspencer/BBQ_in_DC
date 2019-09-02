@@ -23,7 +23,7 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 4. Clone the project https://github.com/jesspencer/good-grub.git
 5. cd good-Grub
 6. Start the flask application that will allow the menu to show in your browswer, with `python finalproject.py`
-7. Lastly, open the WebApp by typing the following into your browser, http://localhost:5000/restaurant/
+7. Open the WebApp by pasting the following into your browser: http://localhost:5000/restaurant/
 
 ## Adding different menus
 If you would like to replace the menus in this project with ones of your own Do It!
