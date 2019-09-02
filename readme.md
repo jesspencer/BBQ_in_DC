@@ -17,8 +17,8 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 - pip
 
 ## RUNNING DOCUMENTATION LOCALLY:
-1. Create a VM; here are the steps [Creating_A_VM] (https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
-2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy] (https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
+1. Create a VM; here are the steps [Creating_A_VM](https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
+2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy](https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
 3. Run the virtual environment
 4. Clone the project https://github.com/jesspencer/good-grub.git
 5. cd good-Grub
