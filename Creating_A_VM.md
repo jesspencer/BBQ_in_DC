@@ -1,12 +1,46 @@
-# Creating A VM
-This VM is created using python3.7. However the code for the project has been done using python2.7 code. Here are the steps: 
+# Running Good-Grub in Python Virtual Environment
 
-1. Create the environment: `virtualenv #name`
-2. Activate: `source #nameofyourvirtualenv/bin/activate`  
-(To Deactivate: type `deactivate` to quit )
-3. Install Python Version2.7: `virtualenv -p/usr/bin/python2.7 #nameofyourvirtualenv `
-4. Install oauth2client: `pip install --upgrade google-api-python-client oauth2client`
-5. Install: `pip3 install requests`
+<!-- toc -->
+
+To run Good-Grub in Python virtual environment follow the steps:
+
+1. Install `virtualenv` package:
+
+   ```sh
+   pip install virtualenv
+   ```
+
+2. Create virtual environment (replace `my-Grub-env` with
+   your virtual environment name):
+
+   ```sh
+   virtualenv my-Grub-env
+   ```
+
+3. Activate the environment.
+   1. For Windows run
+
+      ```sh
+      my-Grub-env\Scripts\activate
+      ```
+
+   2. For Linux and Mac run
+
+      ```sh
+      source my-Grub-env/bin/activate
+      ```
+
+4. Run Good-Grub:
+
+   ```sh
+   cd Good-Grub
+   ```
+
+5. To deactivate virtual environment run:
+
+   ```sh
+   deactivate
+   ```
 
 ## Still stumped ??
 The documentation for installing VM: https://virtualenv.pypa.io/en/latest/installation/
