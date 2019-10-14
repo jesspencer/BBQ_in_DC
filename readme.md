@@ -13,17 +13,17 @@ Database used was SQLALchemy, (https://www.sqlalchemy.org/).
 - python 3.7
 - flask
 - virtualenv
-- os
-- pip
+- httplib2
+- requests
+- oauth2client
 
 ## RUNNING DOCUMENTATION LOCALLY:
 1. Create a VM; here are the steps [Creating_A_VM](https://github.com/jesspencer/Good-Grub/blob/master/Creating_A_VM.md)
-2. Install Flask and Flask-SQLALchemy to your VM; here are the steps [Flask_Flask-SQLALchemy](https://github.com/jesspencer/Good-Grub/blob/master/Flask_Flask-SQLALchemy.md)
-3. Run the virtual environment
-4. Clone the project https://github.com/jesspencer/good-grub.git
-5. cd good-Grub
-6. Start the flask application that will allow the menu to show in your browswer, with `python finalproject.py`
-7. Open the WebApp by pasting the following into your browser: http://localhost:5000/restaurant/
+2. Run the virtual environment
+3. Clone the project https://github.com/jesspencer/good-grub.git
+4. cd good-Grub
+5. Start the flask application that will allow the menu to show in your browser, with `python finalproject.py`
+6. Open the WebApp by pasting the following into your browser: http://localhost:5000/restaurant/
 
 ## Adding different menus
 If you would like to replace the menus in this project with ones of your own Do It!
